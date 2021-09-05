@@ -36,7 +36,16 @@ const IndexPage = ({ robes, lastUpdate }: Props) => {
     <div className="py-3 md:pb-0 font-mono flex flex-col justify-center items-center gap-4 pt-10 md:w-screen">
       <h1 className="text-lg md:text-3xl">The N Project Market</h1>
       <div className="text-center max-w-screen-md md:leading-loose">
+      <h2 className="text-lg pt-3 mv-4">Special</h2>
+                         <p className="md:text-lg pt-2">
+                    <a
+            href="/club-69"
+            className="underline"
+          >
+           Club 69 (101/8888)
+          </a>
 
+        </p>
         <h2 className="text-lg mv-4">Individuals</h2>
 
         <p className="md:text-lg pt-2">
@@ -47,7 +56,7 @@ const IndexPage = ({ robes, lastUpdate }: Props) => {
            0 (36/8888)
           </a>
           </p>
-                  <p className="md:text-lg pt-2">
+          <p className="md:text-lg pt-2">
                     <a
             href="/11"
             className="underline"
@@ -145,17 +154,28 @@ const IndexPage = ({ robes, lastUpdate }: Props) => {
 
         </p>
 
-
-        <h2 className="text-lg pt-3 mv-4">Special</h2>
+        <h2 className="text-lg pt-3 mv-4">Scatter</h2>
                          <p className="md:text-lg pt-2">
                     <a
-            href="/club-69"
+            href="/scatter-5"
             className="underline"
           >
-           Club 69 (101/8888)
+           Scatter 5x (42/8888)
           </a>
 
         </p>
+        <p className="md:text-lg pt-2">
+                    <a
+            href="/scatter-6"
+            className="underline"
+          >
+           Scatter 6x (3/8888)
+          </a>
+
+        </p>
+
+
+        
 
       </div>
     </div>
