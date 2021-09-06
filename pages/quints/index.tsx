@@ -1,8 +1,8 @@
-import { RobeInfo, fetchRobes } from '../api/quints'
+import { RobeInfo, fetchNs } from '../api/fetch-n-by-set-name'
 import { format as ts } from 'timeago.js'
 
 export async function getStaticProps() {
-  const data = await fetchRobes()
+  const data = await fetchNs('quints')
   return {
     props: {
       robes: data.robes,

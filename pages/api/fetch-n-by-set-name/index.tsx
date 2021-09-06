@@ -4,18 +4,16 @@ import { chunk, flatten, orderBy } from 'lodash'
 import { utils as etherUtils, BigNumber } from 'ethers'
 import { rarityImage } from 'loot-rarity'
 import type { OpenseaResponse, Asset } from '../../../utils/openseaTypes'
-import RobeIDs from '../../../data/12.json'
+import Data_Map from '../../../data';
 
-const chunked = chunk(RobeIDs, 20)
 const apiKey = process.env.OPENSEA_API_KEY
 
-const fetchRobePage = async (ids: string[]) => {
+const fetchNPage = async (ids: string[]) => {
   let url = 'https://api.opensea.io/api/v1/assets?collection=n-project&'
   url += ids.map((id) => `token_ids=${id}`).join('&')
 
   const res = await fetch(url);
   const json: OpenseaResponse = await res.json()
-
   return json.assets
 }
 
@@ -26,12 +24,16 @@ export interface RobeInfo {
   svg: string
 }
 
-export const fetchRobes = async () => {
-  const data = await pMap(chunked, fetchRobePage, { concurrency: 2 })
+export const fetchNs= async (setName: string = 'zero') => {  
+  const dataToUse = Data_Map[setName] || [];
+  console.log(dataToUse);
+  const chunked = chunk(dataToUse, 20)
+
+  const data = await pMap(chunked, fetchNPage, { concurrency: 2 })
   const mapped = flatten(data)
     .filter(
       (a: Asset) =>
-        a?.sell_orders?.[0]?.payment_token_contract.symbol === 'ETH',
+        a?.sell_orders?.[0]?.payment_token_contract.symbol === 'ETH' || a?.sell_orders?.[0]?.payment_token_contract.symbol === 'WETH',
     )
     .map((a: Asset): RobeInfo => {
       return {
@@ -54,7 +56,7 @@ export const fetchRobes = async () => {
 
 const handler = async (_req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const data = await fetchRobes()
+    const data = await fetchNs('')
     res.status(200).json(data)
   } catch (err) {
     res.status(500).json({ statusCode: 500, message: err.message })
