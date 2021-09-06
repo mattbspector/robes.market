@@ -33,11 +33,11 @@ const Robe = ({ robe }: { robe: RobeInfo }) => {
 
 const IndexPage = ({ robes, lastUpdate }: Props) => {
   return (
-    <div className="relative py-3 md:pb-0 font-mono flex flex-col justify-center items-center gap-4 pt-10 md:w-screen">
-      <div className="absolute top-2.5 left-2.5 text-xs">
+    <div className="relative py-3 md:pb-0 font-mono flex flex-col justify-center items-center gap-4 md:pt-10 md:w-screen">
+      <div className="block md:absolute top-2.5 left-2.5 text-xs">
         <div>Donations will be used to sweep the floor 🧹🧹🧹</div>
-        <div>@mattyb: 0x70BFA29ACA546E6cFDc7a8F7Aebf07d9a545Cf52</div>
-        <div>@vanillagorilla: 0x2eD2C431b77A021Dffe03D7e8d8dDE481bb07cCB</div>
+        <div onClick={() => navigator?.clipboard?.writeText('0x70BFA29ACA546E6cFDc7a8F7Aebf07d9a545Cf52')} className="cursor-pointer">@mattyb: 0x70BFA29ACA546E6cFDc7a8F7Aebf07d9a545Cf52</div>
+        <div onClick={() => navigator?.clipboard?.writeText('0x2eD2C431b77A021Dffe03D7e8d8dDE481bb07cCB')} className="cursor-pointer">@vanillagorilla: 0x2eD2C431b77A021Dffe03D7e8d8dDE481bb07cCB</div>
 
       </div>
       <h1 className="text-lg md:text-3xl">The N Project Market</h1>
