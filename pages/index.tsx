@@ -156,6 +156,16 @@ const IndexPage = ({ robes, lastUpdate }: Props) => {
 
         </p>
 
+                           <p className="md:text-lg pt-2">
+                    <a
+            href="/straight5"
+            className="underline"
+          >
+           ️️♠️️️ 5 Straight ♠️️️️️ (1/8888)
+          </a>
+
+        </p>
+
 
         <p style={{color: '#ffd700'}} className="md:text-lg pt-2">
                     <a
