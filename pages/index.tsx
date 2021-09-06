@@ -144,12 +144,12 @@ const IndexPage = ({ robes, lastUpdate }: Props) => {
 
 
                 <h2 className="text-lg pt-3 mv-4">Sets</h2>
-                         <p className="md:text-lg pt-2">
+                         <p style={{color: '#ff5c5c'}} className="md:text-lg pt-2">
                     <a
             href="/primes"
             className="underline"
           >
-           Only Primes (9/8888)
+           Pure Primes (9/8888)
           </a>
 
         </p>
