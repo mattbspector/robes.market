@@ -40,7 +40,7 @@ const IndexPage = ({ robes, lastUpdate }: Props) => {
         <div onClick={() => navigator?.clipboard?.writeText('0x2eD2C431b77A021Dffe03D7e8d8dDE481bb07cCB')} className="cursor-pointer">@vanillagorilla: 0x2eD2C431b77A021Dffe03D7e8d8dDE481bb07cCB</div>
 
       </div>
-      <h1 className="text-lg md:text-3xl">The N Project Market</h1>
+      <h1 className="text-lg md:text-3xl">N is just numbers</h1>
       <div className="text-center max-w-screen-md md:leading-loose">
       <h2 className="text-lg mv-4">Special</h2>
                          <p className="md:text-lg pt-2">
