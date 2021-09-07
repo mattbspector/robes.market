@@ -244,7 +244,7 @@ const IndexPage = ({ robes, lastUpdate }: Props) => {
             href="/sumgt70"
             className="underline"
           >
-           Sum(n) > 70  (5/8888)
+           Sum(n) {'>'} 70  (5/8888)
           </a>
 
         </p>
