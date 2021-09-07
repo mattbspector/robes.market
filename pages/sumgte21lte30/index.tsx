@@ -1,4 +1,4 @@
-import { RobeInfo, fetchRobes } from '../api/golden'
+import { RobeInfo, fetchRobes } from '../api/sumgte21lte30'
 import { format as ts } from 'timeago.js'
 
 export async function getStaticProps() {
