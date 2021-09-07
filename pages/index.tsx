@@ -71,6 +71,17 @@ const IndexPage = ({ robes, lastUpdate }: Props) => {
           </a>
 
         </p>
+
+        <p  className="md:text-lg pt-2">
+                    <a
+            href="/8uniques"
+            className="underline"
+          >
+           🎱 8 Unique 🎱 (223/8888)
+          </a>
+
+        </p>
+
         <h2 className="text-lg pt-3 mv-4">Individuals</h2>
 
         <p className="md:text-lg pt-2">
