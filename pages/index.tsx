@@ -208,6 +208,47 @@ const IndexPage = ({ robes, lastUpdate }: Props) => {
 
         </p>
 
+                <h2 className="text-lg pt-3 mv-4">Sums</h2>
+               <p className="md:text-lg pt-2">
+                    <a
+            href="/sumlt20"
+            className="underline"
+          >
+           Sum(n) {"<="} 20 (7/8888)
+          </a>
+
+        </p>
+
+              <p className="md:text-lg pt-2">
+                    <a
+            href="/sumgte21lte30"
+            className="underline"
+          >
+           21 {"<="} Sum(n) {"<="} 30 (297/8888)
+          </a>
+
+        </p>
+
+              <p className="md:text-lg pt-2">
+                    <a
+            href="/sumgte61lte70"
+            className="underline"
+          >
+           61 {"<="} Sum(n) {"<="} 70 (223/8888)
+          </a>
+
+        </p>
+
+             <p className="md:text-lg pt-2">
+                    <a
+            href="/sumgt70"
+            className="underline"
+          >
+           Sum(n) > 70  (5/8888)
+          </a>
+
+        </p>
+
 
         
 
