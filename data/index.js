@@ -15,8 +15,11 @@ import Scatter6IDs from './scatter-6.json';
 import Straight4IDs from './straight4.json';
 import Straight5IDs from './straight5.json';
 import TripIDs from './trips.json';
-
-
+import SumGTE21LTE30IDs from './sumgte21lte30.json';
+import SumGTE61LTE70IDs from './sumgte61lte70.json'
+import SumLTE20IDs from './sumlte20.json';
+import SumGT70IDs from './sumgt70.json';
+import Unique8IDs from './8uniques.json';
 
 
 const DATA_MAP = {
@@ -37,6 +40,11 @@ const DATA_MAP = {
     straight4: Straight4IDs,
     straight5: Straight5IDs,
     trips: TripIDs,
+    sumgte21lte30: SumGTE21LTE30IDs,
+    sumgte61lte70: SumGTE61LTE70IDs,
+    sumgt70: SumGT70IDs,
+    sumlte20: SumLTE20IDs,
+    unique8: Unique8IDs,
 };
 
 
