@@ -7,7 +7,7 @@ const IndexPage = () => {
         <div onClick={() => navigator?.clipboard?.writeText('0x2eD2C431b77A021Dffe03D7e8d8dDE481bb07cCB')} className="cursor-pointer">@vanillagorilla: 0x2eD2C431b77A021Dffe03D7e8d8dDE481bb07cCB</div>
 
       </div>
-      <h1 className="text-lg md:text-3xl">The N Project Market</h1>
+      <h1 className="text-lg md:text-3xl">N is just numbers</h1>
       <div className="text-center max-w-screen-md md:leading-loose">
       <h2 className="text-lg mv-4">Special</h2>
                          <p className="md:text-lg pt-2">
@@ -38,6 +38,17 @@ const IndexPage = () => {
           </a>
 
         </p>
+
+        <p  className="md:text-lg pt-2">
+                    <a
+            href="/8uniques"
+            className="underline"
+          >
+           🎱 8 Unique 🎱 (223/8888)
+          </a>
+
+        </p>
+
         <h2 className="text-lg pt-3 mv-4">Individuals</h2>
 
         <p className="md:text-lg pt-2">
@@ -171,6 +182,47 @@ const IndexPage = () => {
             className="underline"
           >
            Scatter 6x (3/8888)
+          </a>
+
+        </p>
+
+                <h2 className="text-lg pt-3 mv-4">Sums</h2>
+               <p className="md:text-lg pt-2">
+                    <a
+            href="/sumlt20"
+            className="underline"
+          >
+           Sum(n) {"<="} 20 (7/8888)
+          </a>
+
+        </p>
+
+              <p className="md:text-lg pt-2">
+                    <a
+            href="/sumgte21lte30"
+            className="underline"
+          >
+           21 {"<="} Sum(n) {"<="} 30 (297/8888)
+          </a>
+
+        </p>
+
+              <p className="md:text-lg pt-2">
+                    <a
+            href="/sumgte61lte70"
+            className="underline"
+          >
+           61 {"<="} Sum(n) {"<="} 70 (223/8888)
+          </a>
+
+        </p>
+
+             <p className="md:text-lg pt-2">
+                    <a
+            href="/sumgt70"
+            className="underline"
+          >
+           Sum(n) {'>'} 70  (5/8888)
           </a>
 
         </p>
