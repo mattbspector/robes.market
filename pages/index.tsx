@@ -46,14 +46,14 @@ const IndexPage = () => {
             href="/two-unique"
             className="underline"
           >
-           2 Unique Numbers (2/8888)
+           2 Unique (2/8888)
           </a>
                          <p className="md:text-lg pt-2">
                     <a
             href="/three-unique"
             className="underline"
           >
-           3 Unique Numbers (70/8888)
+           3 Unique (70/8888)
           </a>
 
         </p>
