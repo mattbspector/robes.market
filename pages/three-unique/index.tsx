@@ -1,8 +1,8 @@
-import { RobeInfo, fetchRobes } from '../api/0'
+import { RobeInfo, fetchNs } from '../api/fetch-n-by-set-name'
 import { format as ts } from 'timeago.js'
 
 export async function getStaticProps() {
-  const data = await fetchRobes()
+  const data = await fetchNs('threeunique')
   return {
     props: {
       robes: data.robes,
@@ -34,10 +34,10 @@ const Robe = ({ robe }: { robe: RobeInfo }) => {
 const IndexPage = ({ robes, lastUpdate }: Props) => {
   return (
     <div className="py-3 md:pb-0 font-mono flex flex-col justify-center items-center gap-4 pt-10 md:w-screen">
-      <h1 className="text-lg md:text-3xl">0's</h1>
+      <h1 className="text-lg md:text-3xl">Three Unique</h1>
       <div className="text-center max-w-screen-md md:leading-loose">
         <p className="md:text-xl">
-          There are {robes.length} N's for sale containing 0. The floor
+          There are {robes.length} N's for sale with only three unique numbers. There are 70/8888 of these in the N Project. The floor
           price is {robes[0].price} ETH.
         </p>
         <p className="text-sm mv-4">Last updated {ts(lastUpdate)}</p>

@@ -1,37 +1,4 @@
-import { RobeInfo, fetchRobes } from './api/0'
-import { format as ts } from 'timeago.js'
-
-export async function getStaticProps() {
-  const data = await fetchRobes()
-  return {
-    props: {
-      robes: data.robes,
-      lastUpdate: data.lastUpdate,
-    },
-    revalidate: 300,
-  }
-}
-
-interface Props {
-  robes: RobeInfo[]
-  lastUpdate: string
-}
-
-const Robe = ({ robe }: { robe: RobeInfo }) => {
-  return (
-    <a href={robe.url} target="_blank">
-      <div className="m-auto pb-4 mb-8 flex flex-col justify-center items-center gap-2 p-4 md:m-4 border border-white transform hover:scale-105 transition-all bg-black w-full md:w-96">
-        <img src={robe.svg} alt="" width="350" height="350" />
-        <div className="text-center">
-          <p className="text-lg">#{robe.id}</p>
-          <p>{robe.price} ETH</p>
-        </div>
-      </div>
-    </a>
-  )
-}
-
-const IndexPage = ({ robes, lastUpdate }: Props) => {
+const IndexPage = () => {
   return (
     <div className="relative py-3 md:pb-0 font-mono flex flex-col justify-center items-center gap-4 md:pt-10 md:w-screen">
       <div className="block md:absolute top-2.5 left-2.5 text-xs">
@@ -40,7 +7,7 @@ const IndexPage = ({ robes, lastUpdate }: Props) => {
         <div onClick={() => navigator?.clipboard?.writeText('0x2eD2C431b77A021Dffe03D7e8d8dDE481bb07cCB')} className="cursor-pointer">@vanillagorilla: 0x2eD2C431b77A021Dffe03D7e8d8dDE481bb07cCB</div>
 
       </div>
-      <h1 className="text-lg md:text-3xl">N is just numbers</h1>
+      <h1 className="text-lg md:text-3xl"><strong>n</strong> is just numbers</h1>
       <div className="text-center max-w-screen-md md:leading-loose">
       <h2 className="text-lg mv-4">Special</h2>
                          <p className="md:text-lg pt-2">
@@ -72,7 +39,28 @@ const IndexPage = ({ robes, lastUpdate }: Props) => {
 
         </p>
 
-        <p  className="md:text-lg pt-2">
+        <h2 className="text-lg pt-3 mv-4">Unique #s</h2>
+
+        <p className="md:text-lg pt-2">
+          <a
+            href="/two-unique"
+            className="underline"
+          >
+           2 Unique (2/8888)
+          </a>
+          </p>
+                         <p className="md:text-lg pt-2">
+                    <a
+            href="/three-unique"
+            className="underline"
+          >
+           3 Unique (70/8888)
+          </a>
+
+        </p>
+        
+
+          <p  className="md:text-lg pt-2">
                     <a
             href="/8uniques"
             className="underline"
@@ -81,6 +69,7 @@ const IndexPage = ({ robes, lastUpdate }: Props) => {
           </a>
 
         </p>
+
 
         <h2 className="text-lg pt-3 mv-4">Individuals</h2>
 

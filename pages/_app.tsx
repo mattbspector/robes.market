@@ -17,7 +17,7 @@ function Robes({ Component, pageProps }) {
         <title>nproject.market</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Garamond:wght@400;600;700&display=swap"
           rel="stylesheet"
         />
         <meta property="og:url" content="https://nproject.market" />
