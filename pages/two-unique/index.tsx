@@ -37,7 +37,7 @@ const IndexPage = ({ robes, lastUpdate }: Props) => {
       <h1 className="text-lg md:text-3xl">Two Unique</h1>
       <div className="text-center max-w-screen-md md:leading-loose">
         <p className="md:text-xl">
-          There are {robes.length} N's for sale with only two unique numbers. There are 1/8888 of these in the N Project. The floor
+          There are {robes.length} N's for sale with only two unique numbers. There are 2/8888 of these in the N Project. The floor
           price is {robes[0].price} ETH.
         </p>
         <p className="text-sm mv-4">Last updated {ts(lastUpdate)}</p>
