@@ -27,7 +27,7 @@ export interface RobeInfo {
 export const fetchNs= async (setName: string = 'zero') => {  
   const dataToUse = Data_Map[setName] || [];
   console.log(dataToUse);
-  const chunked = chunk(dataToUse, 20)
+  const chunked = chunk(dataToUse, 30)
 
   const data = await pMap(chunked, fetchNPage, { concurrency: 2 })
   var filtered = flatten(data)
