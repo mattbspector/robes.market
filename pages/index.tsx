@@ -39,7 +39,28 @@ const IndexPage = () => {
 
         </p>
 
-        <p  className="md:text-lg pt-2">
+        <h2 className="text-lg pt-3 mv-4">Unique #s</h2>
+
+        <p className="md:text-lg pt-2">
+          <a
+            href="/two-unique"
+            className="underline"
+          >
+           2 Unique (2/8888)
+          </a>
+          </p>
+                         <p className="md:text-lg pt-2">
+                    <a
+            href="/three-unique"
+            className="underline"
+          >
+           3 Unique (70/8888)
+          </a>
+
+        </p>
+        
+
+          <p  className="md:text-lg pt-2">
                     <a
             href="/8uniques"
             className="underline"
@@ -48,6 +69,7 @@ const IndexPage = () => {
           </a>
 
         </p>
+
 
         <h2 className="text-lg pt-3 mv-4">Individuals</h2>
 
