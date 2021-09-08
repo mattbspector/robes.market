@@ -30,12 +30,23 @@ export const fetchNs= async (setName: string = 'zero') => {
   const chunked = chunk(dataToUse, 20)
 
   const data = await pMap(chunked, fetchNPage, { concurrency: 2 })
-  const mapped = flatten(data)
+  var filtered = flatten(data)
     .filter(
       (a: Asset) =>
-        a?.sell_orders?.[0]?.payment_token_contract.symbol === 'ETH' || a?.sell_orders?.[0]?.payment_token_contract.symbol === 'WETH',
+        a?.sell_orders?.[0]?.payment_token_contract.symbol === 'ETH',
     )
-    .map((a: Asset): RobeInfo => {
+
+  // No buy now listings found, filter by WETH to include auctions
+  if (filtered.length == 0){
+    filtered = flatten(data)
+    .filter(
+      (a: Asset) =>
+        a?.sell_orders?.[0]?.payment_token_contract.symbol === 'WETH',
+    )
+
+  }
+
+  const mapped = filtered.map((a: Asset): RobeInfo => {
       return {
         id: a.token_id,
         price: Number(
