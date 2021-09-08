@@ -17,6 +17,12 @@ import Straight5IDs from './straight5.json';
 import TripIDs from './trips.json';
 import ThreeUniqueIDs from './3unique.json';
 import TwoUniqueIDs from './2unique.json';
+import SumGTE21LTE30IDs from './sumgte21lte30.json';
+import SumGTE61LTE70IDs from './sumgte61lte70.json'
+import SumLTE20IDs from './sumlte20.json';
+import SumGT70IDs from './sumgt70.json';
+import Unique8IDs from './8uniques.json';
+
 
 const DATA_MAP = {
     zero: ZeroIDs,
@@ -38,6 +44,11 @@ const DATA_MAP = {
     trips: TripIDs,
     threeunique: ThreeUniqueIDs,
     twounique: TwoUniqueIDs,
+    sumgte21lte30: SumGTE21LTE30IDs,
+    sumgte61lte70: SumGTE61LTE70IDs,
+    sumgt70: SumGT70IDs,
+    sumlte20: SumLTE20IDs,
+    unique8: Unique8IDs,
 };
 
 
