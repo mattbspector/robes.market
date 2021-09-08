@@ -15,9 +15,8 @@ import Scatter6IDs from './scatter-6.json';
 import Straight4IDs from './straight4.json';
 import Straight5IDs from './straight5.json';
 import TripIDs from './trips.json';
-
-
-
+import ThreeUniqueIDs from './3unique.json';
+import TwoUniqueIDs from './2unique.json';
 
 const DATA_MAP = {
     zero: ZeroIDs,
@@ -37,6 +36,8 @@ const DATA_MAP = {
     straight4: Straight4IDs,
     straight5: Straight5IDs,
     trips: TripIDs,
+    threeunique: ThreeUniqueIDs,
+    twounique: TwoUniqueIDs,
 };
 
 
