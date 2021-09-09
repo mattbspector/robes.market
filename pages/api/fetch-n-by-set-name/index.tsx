@@ -27,7 +27,7 @@ export interface RobeInfo {
 export const fetchNs= async (setName: string = 'zero') => {  
   const dataToUse = Data_Map[setName] || [];
   console.log(dataToUse);
-  const chunked = chunk(dataToUse, 30)
+  const chunked = chunk(dataToUse, 20)
 
   const data = await pMap(chunked, fetchNPage, { concurrency: 2 })
   var filtered = flatten(data)
@@ -35,6 +35,7 @@ export const fetchNs= async (setName: string = 'zero') => {
       (a: Asset) =>
         a?.sell_orders?.[0]?.payment_token_contract.symbol === 'ETH',
     )
+
 
   // No buy now listings found, filter by WETH to include auctions
   if (filtered.length == 0){
