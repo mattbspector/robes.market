@@ -17,6 +17,17 @@ const IndexPage = () => {
           </a>
 
         </p>
+
+        <h2 className="text-lg mv-4 pt-3">Divine</h2>
+                         <p className="md:text-lg pt-2">
+                    <a
+            href="/divine-robes"
+            className="underline"
+          >
+           Divine Robes (634/4000)
+          </a>
+
+        </p>
       </div>
     </div>
   )

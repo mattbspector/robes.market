@@ -55,6 +55,7 @@ export const fetchNs= async (setName: string = 'zero') => {
   //   let hasWizard = false;
   //   let hasPhoenix = false;
   //   let hasDemon = false;
+  //   let hasRobe = false;
 
   //   traitList.map((tl) => {
   //     if (tl.includes('Dragon')) {
@@ -69,16 +70,18 @@ export const fetchNs= async (setName: string = 'zero') => {
   //     if (tl.includes('Demon')) {
   //       hasDemon = true;
   //     }
+  //     if (tl.includes('Divine Robe')) {
+  //       hasRobe = true;
+  //     }
   //   })
 
-  //   if (hasDragon && hasWizard && hasPhoenix && hasDemon) {
+  //   if (hasRobe) {
   //     newArr.push(keyt)
   //   }
 
   //   return newArr;
   // }, [])
 
-  // console.log(rareList);
   const dataToUse = Data_Map[setName] || [];
   const chunked = chunk(dataToUse, 20)
 
