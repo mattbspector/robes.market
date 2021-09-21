@@ -13,7 +13,17 @@ const IndexPage = () => {
             href="/quad-mythic"
             className="underline"
           >
-           Quad Mythic (72/4000)
+           🧙‍♂️ 🕊 Quad Mythic (72/4000) 🐉 😈
+          </a>
+
+        </p>
+
+        <p className="md:text-lg pt-2">
+                    <a
+            href="/quad-dragon"
+            className="underline"
+          >
+           🐲 🐲 Four Dragons (10/4000) 🐲 🐲  
           </a>
 
         </p>

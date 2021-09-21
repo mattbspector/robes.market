@@ -51,7 +51,7 @@ export const fetchNs= async (setName: string = 'zero') => {
   // const rareList = ALL_DATA.reduce((newArr, ddd) => {
   //   const keyt = Object.keys(ddd)[0];
   //   const traitList = ddd[keyt];
-  //   let hasDragon = false;
+  //   let hasDragon = 0;
   //   let hasWizard = false;
   //   let hasPhoenix = false;
   //   let hasDemon = false;
@@ -59,28 +59,30 @@ export const fetchNs= async (setName: string = 'zero') => {
 
   //   traitList.map((tl) => {
   //     if (tl.includes('Dragon')) {
-  //       hasDragon = true;
+  //       hasDragon = hasDragon + 1;
   //     }
-  //     if (tl.includes('Wizard')) {
-  //       hasWizard = true;
-  //     }
-  //     if (tl.includes('Phoenix')) {
-  //       hasPhoenix = true;
-  //     }
-  //     if (tl.includes('Demon')) {
-  //       hasDemon = true;
-  //     }
-  //     if (tl.includes('Divine Robe')) {
-  //       hasRobe = true;
-  //     }
+  //     // if (tl.includes('Wizard')) {
+  //     //   hasWizard = true;
+  //     // }
+  //     // if (tl.includes('Phoenix')) {
+  //     //   hasPhoenix = true;
+  //     // }
+  //     // if (tl.includes('Demon')) {
+  //     //   hasDemon = true;
+  //     // }
+  //     // if (tl.includes('Divine Robe')) {
+  //     //   hasRobe = true;
+  //     // }
   //   })
 
-  //   if (hasRobe) {
+  //   if (hasDragon >= 4) {
   //     newArr.push(keyt)
   //   }
 
   //   return newArr;
   // }, [])
+
+  // console.log(rareList);
 
   const dataToUse = Data_Map[setName] || [];
   const chunked = chunk(dataToUse, 20)
