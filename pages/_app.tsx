@@ -14,14 +14,14 @@ function Robes({ Component, pageProps }) {
         `}
       </style>
       <Head>
-        <title>nproject.market</title>
+        <title>adventureclub.market</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Garamond:wght@400;600;700&display=swap"
           rel="stylesheet"
         />
-        <meta property="og:url" content="https://nproject.market" />
-        <meta property="og:title" content="nproject.market" />
+        <meta property="og:url" content="https://adventureclub.market" />
+        <meta property="og:title" content="adventureclub.market" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <meta
           property="og:description"

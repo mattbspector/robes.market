@@ -5,11 +5,12 @@ import { utils as etherUtils, BigNumber } from 'ethers'
 import { rarityImage } from 'loot-rarity'
 import type { OpenseaResponse, Asset } from '../../../utils/openseaTypes'
 import Data_Map from '../../../data';
+import ALL_DATA from '../../../data/data.json';
 
 const apiKey = process.env.OPENSEA_API_KEY
 
 const fetchNPage = async (ids: string[]) => {
-  let url = 'https://api.opensea.io/api/v1/assets?collection=n-project&'
+  let url = 'https://api.opensea.io/api/v1/assets?collection=adventure-cards&'
   url += ids.map((id) => `token_ids=${id}`).join('&')
 
   const res = await fetch(url);
@@ -24,9 +25,61 @@ export interface RobeInfo {
   svg: string
 }
 
-export const fetchNs= async (setName: string = 'zero') => {  
+export const fetchNs= async (setName: string = 'zero') => { 
+  // const rareArrArray = []; 
+  // const traitObj = ALL_DATA.reduce((newArr, ddd) => {
+  //   const keyt = Object.keys(ddd)[0];
+  //   const traitList = ddd[keyt];
+  //   traitList.map((tl) => {
+  //     if (newArr[tl]) {
+  //       newArr[tl] = newArr[tl] + 1;
+  //     } else {
+  //       newArr[tl] = 1;
+  //     }
+  //   })
+  //   return newArr;
+  // }, {})
+
+  // const rareTraits = Object.keys(traitObj).reduce((newArr, to) => {
+  //   if (traitObj[to] === 1) {
+  //     newArr.push(to);
+  //   } 
+
+  //   return newArr;
+  // }, []);
+
+  // const rareList = ALL_DATA.reduce((newArr, ddd) => {
+  //   const keyt = Object.keys(ddd)[0];
+  //   const traitList = ddd[keyt];
+  //   let hasDragon = false;
+  //   let hasWizard = false;
+  //   let hasPhoenix = false;
+  //   let hasDemon = false;
+
+  //   traitList.map((tl) => {
+  //     if (tl.includes('Dragon')) {
+  //       hasDragon = true;
+  //     }
+  //     if (tl.includes('Wizard')) {
+  //       hasWizard = true;
+  //     }
+  //     if (tl.includes('Phoenix')) {
+  //       hasPhoenix = true;
+  //     }
+  //     if (tl.includes('Demon')) {
+  //       hasDemon = true;
+  //     }
+  //   })
+
+  //   if (hasDragon && hasWizard && hasPhoenix && hasDemon) {
+  //     newArr.push(keyt)
+  //   }
+
+  //   return newArr;
+  // }, [])
+
+  // console.log(rareList);
   const dataToUse = Data_Map[setName] || [];
-  console.log(dataToUse);
   const chunked = chunk(dataToUse, 20)
 
   const data = await pMap(chunked, fetchNPage, { concurrency: 2 })
