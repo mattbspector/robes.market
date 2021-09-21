@@ -25,19 +25,8 @@ function Robes({ Component, pageProps }) {
         <link rel="icon" type="image/png" href="/favicon.png" />
         <meta
           property="og:description"
-          content="See the prices for interesting N Project pieces"
+          content="See the prices for interesting Adventure Card Starter Decks"
         />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-206681670-1"></script>
-        <script
-            dangerouslySetInnerHTML={{
-              __html: `  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-206681670-1');`
-            }}
-          />
-
       </Head>
     </>
   )
