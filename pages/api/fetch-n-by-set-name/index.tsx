@@ -25,7 +25,7 @@ export interface RobeInfo {
   svg: string
 }
 
-export const fetchNs= async (setName: string = 'zero') => { 
+export const fetchNs= async (setName: string = 'club69') => { 
   // const rareArrArray = []; 
   // const traitObj = ALL_DATA.reduce((newArr, ddd) => {
   //   const keyt = Object.keys(ddd)[0];
@@ -56,33 +56,30 @@ export const fetchNs= async (setName: string = 'zero') => {
   //   let hasPhoenix = false;
   //   let hasDemon = false;
   //   let hasRobe = false;
+  //   let numMythic = 0;
 
   //   traitList.map((tl) => {
   //     if (tl.includes('Dragon')) {
-  //       hasDragon = hasDragon + 1;
+  //       numMythic = numMythic + 1;
   //     }
-  //     // if (tl.includes('Wizard')) {
-  //     //   hasWizard = true;
-  //     // }
-  //     // if (tl.includes('Phoenix')) {
-  //     //   hasPhoenix = true;
-  //     // }
-  //     // if (tl.includes('Demon')) {
-  //     //   hasDemon = true;
-  //     // }
-  //     // if (tl.includes('Divine Robe')) {
-  //     //   hasRobe = true;
-  //     // }
+  //     if (tl.includes('Wizard')) {
+  //       numMythic = numMythic + 1;
+  //     }
+  //     if (tl.includes('Phoenix')) {
+  //       numMythic = numMythic + 1;
+  //     }
+  //     if (tl.includes('Demon')) {
+  //       numMythic = numMythic + 1;
+  //     }
   //   })
 
-  //   if (hasDragon >= 4) {
+  //   if (numMythic >= 10) {
   //     newArr.push(keyt)
   //   }
 
   //   return newArr;
   // }, [])
 
-  // console.log(rareList);
 
   const dataToUse = Data_Map[setName] || [];
   const chunked = chunk(dataToUse, 20)

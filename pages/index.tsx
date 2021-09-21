@@ -13,20 +13,74 @@ const IndexPage = () => {
             href="/quad-mythic"
             className="underline"
           >
-           🧙‍♂️ 🕊 Quad Mythic (72/4000) 🐉 😈
+           🧙‍♂️ 🕊 All Four Unique Mythics (72/4000) 🐉 😈
+          </a>
+
+        </p>
+
+       
+
+        <p className="md:text-lg pt-2">
+                    <a
+            href="/five-mythics"
+            className="underline"
+          >
+           Five Mythics (98/4000)
           </a>
 
         </p>
 
         <p className="md:text-lg pt-2">
                     <a
-            href="/quad-dragon"
+            href="/six-mythics"
             className="underline"
           >
-           🐲 🐲 Four Dragons (10/4000) 🐲 🐲  
+           Six Mythics (40/4000)
           </a>
 
         </p>
+
+        <p className="md:text-lg pt-2">
+                    <a
+            href="/seven-mythics"
+            className="underline"
+          >
+           Seven Mythics (23/4000)
+          </a>
+
+        </p>
+
+        <p className="md:text-lg pt-2">
+                    <a
+            href="/eight-mythics"
+            className="underline"
+          >
+           Eight Mythics (11/4000)
+          </a>
+
+        </p>
+
+        <p className="md:text-lg pt-2">
+                    <a
+            href="/nine-mythics"
+            className="underline"
+          >
+           Nine Mythics (7/4000)
+          </a>
+
+        </p>
+
+        <p className="md:text-lg pt-2">
+                    <a
+            href="/ten-plus-mythics"
+            className="underline"
+          >
+           10+ Mythics (3/4000)
+          </a>
+
+        </p>
+
+       
 
         <h2 className="text-lg mv-4 pt-3">Divine</h2>
                          <p className="md:text-lg pt-2">
@@ -35,6 +89,17 @@ const IndexPage = () => {
             className="underline"
           >
            Divine Robes (634/4000)
+          </a>
+
+        </p>
+
+        <h2 className="text-lg mv-4 pt-3">Special</h2>
+        <p className="md:text-lg pt-2">
+                    <a
+            href="/quad-dragon"
+            className="underline"
+          >
+           Four Dragons (10/4000)
           </a>
 
         </p>
