@@ -41,7 +41,7 @@ export const fetchNs= async (setName: string = 'club69') => {
   // }, {})
 
   // const rareTraits = Object.keys(traitObj).reduce((newArr, to) => {
-  //   if (traitObj[to] === 1) {
+  //   if (traitObj[to] <= 2) {
   //     newArr.push(to);
   //   } 
 
@@ -57,29 +57,41 @@ export const fetchNs= async (setName: string = 'club69') => {
   //   let hasDemon = false;
   //   let hasRobe = false;
   //   let numMythic = 0;
+  //   let hasRare = false;
+  //   let hasInvisibility = false;
+  //   let hasCloak = false;
 
   //   traitList.map((tl) => {
-  //     if (tl.includes('Dragon')) {
-  //       numMythic = numMythic + 1;
-  //     }
+  //     // if (tl.includes('Dragon')) {
+  //     //   numMythic = numMythic + 1;
+  //     // }
   //     if (tl.includes('Wizard')) {
-  //       numMythic = numMythic + 1;
+  //       hasWizard = true;
   //     }
-  //     if (tl.includes('Phoenix')) {
-  //       numMythic = numMythic + 1;
+  //     // if (tl.includes('Phoenix')) {
+  //     //   numMythic = numMythic + 1;
+  //     // }
+  //     // if (tl.includes('Demon')) {
+  //     //   numMythic = numMythic + 1;
+  //     // }
+
+  //     if (tl.includes('Invisibility')) {
+  //       hasInvisibility = true;
   //     }
-  //     if (tl.includes('Demon')) {
-  //       numMythic = numMythic + 1;
+
+  //     if (tl.includes('Cloak')) {
+  //       hasCloak = true;
   //     }
   //   })
 
-  //   if (numMythic >= 10) {
+  //   if (hasInvisibility && hasCloak && hasWizard) {
   //     newArr.push(keyt)
   //   }
 
   //   return newArr;
   // }, [])
 
+  // console.log(JSON.stringify(rareList));
 
   const dataToUse = Data_Map[setName] || [];
   const chunked = chunk(dataToUse, 20)

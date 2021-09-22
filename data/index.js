@@ -7,6 +7,7 @@ import SevenMythicIDs from './seven-mythics.json';
 import EightMythicIDs from './eight-mythics.json';
 import NineMythicIDs from './nine-mythics.json';
 import TenMythicIDs from './ten-mythics-plus.json';
+import InvisibilityCloakIDs from './invisibility-cloak.json';
 
 const DATA_MAP = {
     club69: Club69IDs,
@@ -18,6 +19,7 @@ const DATA_MAP = {
     eightMythic: EightMythicIDs,
     nineMythic: NineMythicIDs,
     tenMythic: TenMythicIDs,
+    invisiblityCloak: InvisibilityCloakIDs,
 };
 
 

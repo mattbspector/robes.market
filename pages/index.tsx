@@ -7,7 +7,30 @@ const IndexPage = () => {
       </div>
       <h1 className="text-lg md:text-3xl"><strong>Adventure Club</strong></h1>
       <div className="text-center max-w-screen-md md:leading-loose">
-      <h2 className="text-lg mv-4">Mythic</h2>
+
+      <h2 className="text-lg mv-4">Special</h2>
+        <p className="md:text-lg pt-2">
+                    <a
+            href="/harry-potter"
+            className="underline"
+            style={{color: '#ffd800'}}
+          >
+           🪄 ⚡️ Harry Potter (53/4000) ⚡️ 🪄 
+          </a>
+
+        </p>
+        <p className="md:text-lg pt-2">
+                    <a
+            href="/quad-dragon"
+            className="underline"
+          >
+           Four Dragons (10/4000)
+          </a>
+
+        </p>
+
+
+      <h2 className="text-lg mv-4 pt-3">Mythic</h2>
                          <p className="md:text-lg pt-2">
                     <a
             href="/quad-mythic"
@@ -89,17 +112,6 @@ const IndexPage = () => {
             className="underline"
           >
            Divine Robes (634/4000)
-          </a>
-
-        </p>
-
-        <h2 className="text-lg mv-4 pt-3">Special</h2>
-        <p className="md:text-lg pt-2">
-                    <a
-            href="/quad-dragon"
-            className="underline"
-          >
-           Four Dragons (10/4000)
           </a>
 
         </p>
